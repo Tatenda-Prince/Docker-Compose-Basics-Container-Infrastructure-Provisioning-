@@ -103,7 +103,31 @@ we can also simply bring it up to running by entering : sudo dockerr compose up 
 Now lets move on to step 2 where we will create multiple containers using the docker-compose.yaml
 
 
-# Provision multiple containers 
+# Provision multiple containers and add Networks
+
+So basically we are going to add another container to our previous existing yaml file and name it website2 and add a network .
+We are are going to: nano docker-compose. yaml 
+
+
+![image alt]()
+
+
+Let’s dive into what’s happening in this file —
+
+1.Networks: Configures the service to connect to a user-defined network (chels) with a specified IP address.
+
+2.ipam: Defines custom network settings for the (Chels) network.
+
+3. Driver: Default
+    Uses Docker's default networking driver (bridge driver).
+
+4. Config: Configures the network's subnet:
+    subnet: "192.168.92.0/24"
+   
+Specifies the subnet for the chels network, allowing IP addresses from 192.168.92.1 to 192.168.92.254.
+
+
+
 
 
 
