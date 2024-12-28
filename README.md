@@ -132,7 +132,7 @@ We are going to run - sudo docker compose up -d again
 
 As you can see from below our new container websit2 was created successfully.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/0aec240fac18dba82bf0a850903c7c4a5a3e70bb/Images/Screenshot%202024-12-28%20135705.png)
 
 
 
