@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  wordpress:
+    image: wordpress
+    container_name: wordpress_cfa
+    ports:
+      - "8089:80" # Maps port 8089 on your host to port 80 in the container
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: "Tatenda"
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      chels:
+        ipv4_address: "10.56.1.21"
+
+  mysql:
+    image: mysql:5.7
+    container_name: wordpress_cfc
+    environment:
+      MYSQL_ROOT_PASSWORD: "Tatenda"
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      chels:
+        ipv4_address: "10.56.1.20"
+
+networks:
+  chels:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "10.56.1.0/24"
+
+volumes:
+  mysql_data:
