@@ -4,6 +4,8 @@
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/6bb0048362a93327fc6ec6c87619ec1808b94b7f/Images/Screenshot%202024-12-28%20112152.png)
 
 # Intro 
+This is a continuation of my previous project where I took you through how we can use Docker’s fundamental commands and concepts by creating a Python/Boto3 development environment that involved building a custom image, running containers and creating bind mounts.
+
 Today, we are going to take it a step further to use a Docker Compose file to build/provision an infrastructure of running container according to the configurations written in the file.
 
 
@@ -32,6 +34,21 @@ Basic knowledge and understanding of containerization and Docker
 Basic Linux command line knowledge
 
 Basic knowledge and use of an Interactive Development Environment (IDE).
+
+# Step 0: Set up environment
+
+first, head on to open our terminal, Using Ubuntu WSL2 we are going to install Docker and Docker compose, then run the following commands-
+
+sudo apt update
+
+sudo apt install docker.io docker-compose -y 
+
+# Step 1: Configuring the docker-compose.yml file
+
+
+
+
+
 
 
 
