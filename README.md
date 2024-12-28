@@ -141,7 +141,7 @@ sudo docker networking ls
 
 As you can see from below we now have two docker composed networks the Default that was created by docker and the other one that we specified.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/54c78c70f5550d45e0b2952e4191316c4104818b/Images/Screenshot%202024-12-28%20140022.png)
 
 
 Now if we run Docker inspect we should be able to see our container with the IP Address we configured ealier.
