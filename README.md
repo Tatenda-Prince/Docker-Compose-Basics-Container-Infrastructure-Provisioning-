@@ -148,7 +148,7 @@ Now if we run Docker inspect we should be able to see our container with the IP 
 run- sudo docker inspect 
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/54c78c70f5550d45e0b2952e4191316c4104818b/Images/Screenshot%202024-12-28%20140022.png)
 
 
 
