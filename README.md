@@ -98,7 +98,12 @@ as you can see from below our container was deleted successfully
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/775b8d6d8a7c9af7611ee43a0c959bb4657072fe/Images/Screenshot%202024-12-28%20131038.png) 
 
 
-we can also simply bring it to running by entering sudo dockerr compose up -d 
+we can also simply bring it up to running by entering : sudo dockerr compose up -d 
+
+Now lets move on to step 2 where we will create multiple containers using the docker-compose.yaml
+
+
+# Provision multiple containers 
 
 
 
