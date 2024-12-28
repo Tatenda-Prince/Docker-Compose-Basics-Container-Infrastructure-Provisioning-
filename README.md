@@ -47,7 +47,7 @@ sudo apt install docker.io docker-compose -y
 
 On our termianl we are going to make a new directory called Chels and cd into to create a file docker-compose.yaml
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/f70ced21afefd86f95b6adfcf28e9797a65ea6bc/Images/Screenshot%202024-12-28%20123327.png)
 
 
 Let’s dive into what’s happening in this file —
