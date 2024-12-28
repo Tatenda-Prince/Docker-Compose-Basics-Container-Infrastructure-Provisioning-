@@ -127,6 +127,14 @@ Let’s dive into what’s happening in this file —
 Specifies the subnet for the chels network, allowing IP addresses from 192.168.92.1 to 192.168.92.254.
 
 
+So lets save the file and test it out to check if it is working-
+We are going to run - sudo docker compose up -d again 
+
+
+
+
+
+
 
 
 
