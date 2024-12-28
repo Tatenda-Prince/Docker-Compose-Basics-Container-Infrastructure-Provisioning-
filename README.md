@@ -56,6 +56,26 @@ As we know, this is a Docker Compose file that defines a set of services and the
 
 The file begins with specifying the version of the Docker Compose syntax that the file is using, which is version 3.
 
+Service: Defines the services (containers) to be created.
+
+Wesite: The name of the service, which will host the website.
+
+Image: Specifies the Docker image to use for the service. Here, it uses the official Nginx image, a lightweight and efficient web server.
+
+Ports: Maps ports from the host machine to the container.
+
+  8081:80 : Maps port 8081 on your machine to port 80 inside the container (the default HTTP port used by Nginx). You can access the Nginx server at http://localhost:8081.
+
+Restart: Ensures the container automatically restarts under certain conditions.
+
+Always: The container will restart anytime it stops, whether due to failure or manual intervention.
+  
+
+
+
+
+
+
 
 
 
