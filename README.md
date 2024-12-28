@@ -45,6 +45,17 @@ sudo apt install docker.io docker-compose -y
 
 # Step 1: Configuring the docker-compose.yml file
 
+On our termianl we are going to make a new directory called Chels and cd into to create a file docker-compose.yaml
+
+![image alt]()
+
+
+Let’s dive into what’s happening in this file —
+
+As we know, this is a Docker Compose file that defines a set of services and their configurations.
+
+The file begins with specifying the version of the Docker Compose syntax that the file is using, which is version 3.
+
 
 
 
