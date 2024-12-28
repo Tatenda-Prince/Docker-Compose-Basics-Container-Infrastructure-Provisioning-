@@ -109,7 +109,7 @@ So basically we are going to add another container to our previous existing yaml
 We are are going to: nano docker-compose. yaml 
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/28d71e008d87afda7958caf75df48cbb44d3ad7c/Images/Screenshot%202024-12-28%20133544.png)
 
 
 Let’s dive into what’s happening in this file —
