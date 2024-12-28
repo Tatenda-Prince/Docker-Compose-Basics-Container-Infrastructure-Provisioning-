@@ -82,7 +82,7 @@ docker compose up -d
 Now lets check wheather our website works by going to our local browser and typing - localhost:8081
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/c976437d23cf98574f9d71c940c4fe92fdd8ae81/Images/Screenshot%202024-12-28%20130240.png)
 
 
 We did get a welcome message informing us that our website is working. 
