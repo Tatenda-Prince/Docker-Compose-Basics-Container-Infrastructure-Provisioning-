@@ -130,6 +130,31 @@ Specifies the subnet for the chels network, allowing IP addresses from 192.168.9
 So lets save the file and test it out to check if it is working-
 We are going to run - sudo docker compose up -d again 
 
+As you can see from below our new container websit2 was created successfully.
+
+![image alt]()
+
+
+
+Now lets go on to verify our networking by running -
+sudo docker networking ls 
+
+As you can see from below we now have two docker composed networks the Default that was created by docker and the other one that we specified.
+
+![image alt]()
+
+
+Now if we run Docker inspect we should be able to see our container with the IP Address we configured ealier.
+run- sudo docker inspect 
+
+
+![image alt]()
+
+
+
+
+
+
 
 
 
