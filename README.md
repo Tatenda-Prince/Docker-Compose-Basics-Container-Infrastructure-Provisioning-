@@ -76,10 +76,11 @@ Now lets run our docker-compose.yaml to see what happens by running this command
 docker compose up -d 
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/c9457de4c90c0fd3819095ee13bb4a855e23af71/Images/Screenshot%202024-12-28%20131131.png)
 
 
 Now lets check wheather our website works by going to our local browser and typing - localhost:8081
+
 
 ![image alt]()
 
