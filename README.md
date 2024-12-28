@@ -69,6 +69,43 @@ The file begins with specifying the version of the Docker Compose syntax that th
 5.Restart: Ensures the container automatically restarts under certain conditions.
 
 6.Always: The container will restart anytime it stops, whether due to failure or manual intervention.
+
+
+Now lets run our docker-compose.yaml to see what happens by running this command-
+
+docker compose up -d 
+
+
+![image alt]()
+
+
+Now lets check wheather our website works by going to our local browser and typing - localhost:8081
+
+![image alt]()
+
+
+We did get a welcome message informing us that our website is working. 
+
+
+What if we want to delete the container, we can simply run this command - 
+
+sudo docker compose down
+
+as you can see from below our container was deleted successfully
+
+
+![image alt]() 
+
+
+we can also simply bring it to running by entering sudo dockerr compose up -d 
+
+
+
+
+
+
+
+
   
 
 
