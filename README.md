@@ -162,10 +162,63 @@ First, you have to create a new directory and create a file as shown below:
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/48b55d90e7c9a20d76661420e545f04cfd96c0f9/Images/Screenshot%202024-12-28%20200319.png)
 
 
-lets create our new file 
+Now that we have successfully created our file.
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/5327c2a9c925e437402bf984fb91c2687ecbbded/Images/Screenshot%202024-12-28%20200329.png)
 
+Let’s dive into what’s happening in this file —
+
+Version: "3"
+  
+Services
+1.WordPress:
+Image: wordpress - This pulls the official WordPress Docker image from Docker Hub.
+
+Container Name: wordpress_cfa - Sets a custom name for the WordPress container.
+
+Ports:
+Maps port 8089 on the host machine to port 80 inside the container (HTTP traffic).
+
+Depends On:
+Ensures the mysql service starts before the wordpress service.
+
+Environment Variables:
+Configures the WordPress container to connect to the MySQL database:
+WORDPRESS_DB_HOST: Points to the MySQL service (mysql).
+WORDPRESS_DB_USER: Specifies the database username (root).
+WORDPRESS_DB_PASSWORD: Sets the password for the database (Tatenda).
+WORDPRESS_DB_NAME: Specifies the database name (wordpress).
+
+Networks:
+Connects to the chels custom network with a static IP address (10.56.1.21).
+
+2.MySQL:
+Image: mysql:5.7 - Uses MySQL version 5.7.
+
+Container Name: wordpress_cfc - Sets a custom name for the MySQL container.
+
+Environment Variables:
+Configures MySQL:
+MYSQL_ROOT_PASSWORD: Sets the root password (Tatenda).
+MYSQL_DATABASE: Creates a database named wordpress during initialization.
+
+Volumes:
+Mounts a volume named mysql_data to /var/lib/mysql in the container, persisting database data.
+
+Networks:
+Connects to the chels custom network with a static IP address (10.56.1.20).
+
+Networks
+Custom Network (chels):
+
+Driver: bridge - Creates an isolated network for the services.
+
+IPAM Configuration:
+Defines a subnet (10.56.1.0/24) and assigns static IPs to containers within this range.
+
+Volumes
+mysql_data:
+A named volume used to persist MySQL data across container restarts.
 
 
 
