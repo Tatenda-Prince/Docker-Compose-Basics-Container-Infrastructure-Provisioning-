@@ -171,6 +171,7 @@ Let’s dive into what’s happening in this file —
 Version: "3"
   
 Services
+
 1.WordPress:
 Image: wordpress - This pulls the official WordPress Docker image from Docker Hub.
 
@@ -184,13 +185,18 @@ Ensures the mysql service starts before the wordpress service.
 
 Environment Variables:
 Configures the WordPress container to connect to the MySQL database:
+
 WORDPRESS_DB_HOST: Points to the MySQL service (mysql).
+
 WORDPRESS_DB_USER: Specifies the database username (root).
+
 WORDPRESS_DB_PASSWORD: Sets the password for the database (Tatenda).
+
 WORDPRESS_DB_NAME: Specifies the database name (wordpress).
 
 Networks:
 Connects to the chels custom network with a static IP address (10.56.1.21).
+
 
 2.MySQL:
 Image: mysql:5.7 - Uses MySQL version 5.7.
@@ -219,6 +225,18 @@ Defines a subnet (10.56.1.0/24) and assigns static IPs to containers within this
 Volumes
 mysql_data:
 A named volume used to persist MySQL data across container restarts.
+
+Here is our complete docker-compose.yaml file now let run it by entering these commands -
+
+docker compose up -d
+
+docker compose ps 
+
+Below you can our that two containers were successfully created
+
+![image alt]()
+
+
 
 
 
