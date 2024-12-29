@@ -244,7 +244,7 @@ As you can see from below our WordPress website is working perfectly
 
 
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/3e2e31d73b61ed085a8fd16a229dfff8b0b1b115/Images/Screenshot%202024-12-28%20204756.png)
 
 
 # Congratulations!
