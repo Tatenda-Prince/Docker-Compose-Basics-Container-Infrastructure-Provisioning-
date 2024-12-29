@@ -159,7 +159,14 @@ We are going to deploy a wordpress website using Docker compose with two separat
 Now lets go ahead and create our WordPress docker-compose.yaml.
 First, you have to create a new directory and create a file as shown below:
 
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/48b55d90e7c9a20d76661420e545f04cfd96c0f9/Images/Screenshot%202024-12-28%20200319.png)
+
+
+lets create our new file 
+
 ![image alt]()
+
+
 
 
 
