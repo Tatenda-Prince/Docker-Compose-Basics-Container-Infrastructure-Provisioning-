@@ -156,6 +156,14 @@ run- sudo docker inspect
 We are going to deploy a wordpress website using Docker compose with two separate containers simply because a Wordpress has two main components the Fronted (web) and Database (mysql) in Docker that with be two separate containers.
 
 
+Now lets go ahead and create our WordPress docker-compose.yaml.
+First, you have to create a new directory and create a file as shown below:
+
+![image alt]()
+
+
+
+
 
 
 
