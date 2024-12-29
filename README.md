@@ -240,7 +240,7 @@ Now we can go to our local browser and type localhost:8089 to check if our WordP
 
 As you can see from below our WordPress website is working perfectly
 
-![image alt]()
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/b088d3136b8903ce7a14ee006d2c01ae4212e379/Images/Screenshot%202024-12-28%20204730.png)
 
 
 
