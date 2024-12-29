@@ -232,9 +232,23 @@ docker compose up -d
 
 docker compose ps 
 
-Below you can our that two containers were successfully created
+Below you can see that two containers were successfully created.
+
+![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/e18285e8c975ad8a62016e70a4a0f41dbaf7be50/Images/Screenshot%202024-12-28%20204533.png)
+
+Now we can go to our local browser and type localhost:8089 to check if our WordPress website is working
+
+As you can see from below our WordPress website is working perfectly
 
 ![image alt]()
+
+
+
+![image alt]()
+
+
+# Congratulations!
+You’ve successfully completed “Construct Container Compose”. You’ve learned Docker/Docker compose fundamentals commands and concepts by creating a Python/Boto3 development environment which involved building a custom image from a Dockerfile, running containers, creating bind mounts and logically separate networks and deployed containers in them.
 
 
 
