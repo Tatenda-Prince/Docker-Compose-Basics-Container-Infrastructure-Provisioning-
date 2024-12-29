@@ -153,6 +153,8 @@ run- sudo docker inspect
 
 # Step 3: Deploying a WordPress Website
 
+We are going to deploy a wordpress website using Docker compose with two separate containers simply because a Wordpress has two main components the Fronted (web) and Database (mysql) in Docker that with be two separate containers.
+
 
 
 
