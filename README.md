@@ -151,6 +151,10 @@ run- sudo docker inspect
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/e185f7bea420e34864f0e8b5211f775c24c8cc3e/Images/Screenshot%202024-12-28%20141001.png)
 
 
+# Step 3: Deploying a WordPress Website
+
+
+
 
 
 
