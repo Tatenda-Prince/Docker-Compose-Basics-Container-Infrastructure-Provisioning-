@@ -184,6 +184,7 @@ Version: "3"
 Services
 
 1.WordPress:
+
 Image: wordpress - This pulls the official WordPress Docker image from Docker Hub.
 
 Container Name: wordpress_cfa - Sets a custom name for the WordPress container.
@@ -210,6 +211,8 @@ Connects to the chels custom network with a static IP address (10.56.1.21).
 
 
 2.MySQL:
+
+
 Image: mysql:5.7 - Uses MySQL version 5.7.
 
 Container Name: wordpress_cfc - Sets a custom name for the MySQL container.
