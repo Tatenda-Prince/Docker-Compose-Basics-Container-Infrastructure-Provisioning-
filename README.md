@@ -185,29 +185,29 @@ Services
 
 1.WordPress:
 
-Image: wordpress - This pulls the official WordPress Docker image from Docker Hub.
+Image: ~wordpress - This pulls the official WordPress Docker image from Docker Hub.
 
-Container Name: wordpress_cfa - Sets a custom name for the WordPress container.
+Container Name: ~wordpress_cfa - Sets a custom name for the WordPress container.
 
 Ports:
 Maps port 8089 on the host machine to port 80 inside the container (HTTP traffic).
 
 Depends On:
-Ensures the mysql service starts before the wordpress service.
+~Ensures the mysql service starts before the wordpress service.
 
 Environment Variables:
-Configures the WordPress container to connect to the MySQL database:
+~Configures the WordPress container to connect to the MySQL database:
 
-WORDPRESS_DB_HOST: Points to the MySQL service (mysql).
+WORDPRESS_DB_HOST: ~Points to the MySQL service (mysql).
 
-WORDPRESS_DB_USER: Specifies the database username (root).
+WORDPRESS_DB_USER: ~Specifies the database username (root).
 
-WORDPRESS_DB_PASSWORD: Sets the password for the database (Tatenda).
+WORDPRESS_DB_PASSWORD: ~Sets the password for the database (Tatenda).
 
-WORDPRESS_DB_NAME: Specifies the database name (wordpress).
+WORDPRESS_DB_NAME: ~Specifies the database name (wordpress).
 
 Networks:
-Connects to the chels custom network with a static IP address (10.56.1.21).
+~Connects to the chels custom network with a static IP address (10.56.1.21).
 
 
 2.MySQL:
