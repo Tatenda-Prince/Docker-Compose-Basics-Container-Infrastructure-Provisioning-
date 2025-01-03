@@ -190,7 +190,7 @@ Image: ~wordpress - This pulls the official WordPress Docker image from Docker H
 Container Name: ~wordpress_cfa - Sets a custom name for the WordPress container.
 
 Ports:
-Maps port 8089 on the host machine to port 80 inside the container (HTTP traffic).
+~Maps port 8089 on the host machine to port 80 inside the container (HTTP traffic).
 
 Depends On:
 ~Ensures the mysql service starts before the wordpress service.
@@ -215,30 +215,30 @@ Networks:
 
 Image: mysql:5.7 - Uses MySQL version 5.7.
 
-Container Name: wordpress_cfc - Sets a custom name for the MySQL container.
+Container Name: ~wordpress_cfc - Sets a custom name for the MySQL container.
 
 Environment Variables:
 Configures MySQL:
-MYSQL_ROOT_PASSWORD: Sets the root password (Tatenda).
-MYSQL_DATABASE: Creates a database named wordpress during initialization.
+~MYSQL_ROOT_PASSWORD: Sets the root password (Tatenda).
+~MYSQL_DATABASE: Creates a database named wordpress during initialization.
 
 Volumes:
-Mounts a volume named mysql_data to /var/lib/mysql in the container, persisting database data.
+~Mounts a volume named mysql_data to /var/lib/mysql in the container, persisting database data.
 
 Networks:
-Connects to the chels custom network with a static IP address (10.56.1.20).
+~Connects to the chels custom network with a static IP address (10.56.1.20).
 
 Networks
-Custom Network (chels):
+~Custom Network (chels):
 
 Driver: bridge - Creates an isolated network for the services.
 
 IPAM Configuration:
-Defines a subnet (10.56.1.0/24) and assigns static IPs to containers within this range.
+~Defines a subnet (10.56.1.0/24) and assigns static IPs to containers within this range.
 
 Volumes
 mysql_data:
-A named volume used to persist MySQL data across container restarts.
+~A named volume used to persist MySQL data across container restarts.
 
 Here is our complete docker-compose.yaml file now let run it by entering these commands -
 
