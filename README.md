@@ -39,9 +39,9 @@ Basic knowledge and use of an Interactive Development Environment (IDE).
 
 first, head on to open our terminal, Using Ubuntu WSL2 we are going to install Docker and Docker compose, then run the following commands-
 
-sudo apt update
+~ sudo apt update
 
-sudo apt install docker.io docker-compose -y 
+~ sudo apt install docker.io docker-compose -y 
 
 # Step 1: Configuring the docker-compose.yml file
 
@@ -73,7 +73,7 @@ The file begins with specifying the version of the Docker Compose syntax that th
 
 Now lets run our docker-compose.yaml to see what happens by running this command-
 
-docker compose up -d 
+~ docker compose up -d 
 
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/c9457de4c90c0fd3819095ee13bb4a855e23af71/Images/Screenshot%202024-12-28%20131131.png)
@@ -90,7 +90,7 @@ We did get a welcome message informing us that our website is working.
 
 What if we want to delete the container, we can simply run this command - 
 
-sudo docker compose down
+~ sudo docker compose down
 
 as you can see from below our container was deleted successfully
 
@@ -128,7 +128,9 @@ Specifies the subnet for the chels network, allowing IP addresses from 192.168.9
 
 
 So lets save the file and test it out to check if it is working-
-We are going to run - sudo docker compose up -d again 
+We are going to run - 
+
+~ sudo docker compose up -d again 
 
 As you can see from below our new container websit2 was created successfully.
 
@@ -137,7 +139,7 @@ As you can see from below our new container websit2 was created successfully.
 
 
 Now lets go on to verify our networking by running -
-sudo docker networking ls 
+~sudo docker networking ls 
 
 As you can see from below we now have two docker composed networks the Default that was created by docker and the other one that we specified.
 
@@ -145,7 +147,8 @@ As you can see from below we now have two docker composed networks the Default t
 
 
 Now if we run Docker inspect we should be able to see our container with the IP Address we configured ealier.
-run- sudo docker inspect 
+
+~ run- sudo docker inspect 
 
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/e185f7bea420e34864f0e8b5211f775c24c8cc3e/Images/Screenshot%202024-12-28%20141001.png)
@@ -228,9 +231,9 @@ A named volume used to persist MySQL data across container restarts.
 
 Here is our complete docker-compose.yaml file now let run it by entering these commands -
 
-docker compose up -d
+~ docker compose up -d
 
-docker compose ps 
+~ docker compose ps 
 
 Below you can see that two containers were successfully created.
 
