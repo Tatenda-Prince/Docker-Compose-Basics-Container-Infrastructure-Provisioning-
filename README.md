@@ -51,24 +51,32 @@ On our termianl we are going to make a new directory called Chels and cd into to
 
 
 Let’s dive into what’s happening in this file —
-
 As we know, this is a Docker Compose file that defines a set of services and their configurations.
 
-The file begins with specifying the version of the Docker Compose syntax that the file is using, which is version 3.
 
-1.Service: Defines the services (containers) to be created.
+The file begins with specifying the version of the Docker Compose syntax that the file is using, which is version: 3.
 
-2.Wesite: The name of the service, which will host the website.
+1. Service: Defines the services (containers) to be created.
+   
 
-3.Image: Specifies the Docker image to use for the service. Here, it uses the official Nginx image, a lightweight and efficient web server.
+3. Wesite: The name of the service, which will host the website.
+   
 
-4.Ports: Maps ports from the host machine to the container.
+5. Image: Specifies the Docker image to use for the service. Here, it uses the official Nginx image, a lightweight and efficient web server.
+   
+
+7. Ports: Maps ports from the host machine to the container.
+   
 
   8081:80 : Maps port 8081 on your machine to port 80 inside the container (the default HTTP port used by Nginx). You can access the Nginx server at http://localhost:8081.
+  
 
-5.Restart: Ensures the container automatically restarts under certain conditions.
+5. Restart: Ensures the container automatically restarts under certain conditions.
+   
 
-6.Always: The container will restart anytime it stops, whether due to failure or manual intervention.
+7. Always: The container will restart anytime it stops, whether due to failure or manual intervention.
+
+   
 
 
 Now lets run our docker-compose.yaml to see what happens by running this command-
