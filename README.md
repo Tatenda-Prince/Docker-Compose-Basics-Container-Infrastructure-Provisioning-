@@ -137,6 +137,32 @@ We are are going to: nano docker-compose. yaml
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/28d71e008d87afda7958caf75df48cbb44d3ad7c/Images/Screenshot%202024-12-28%20133544.png)
 
+```yaml
+version: "3"
+services:
+  website:
+    image: nginx
+    ports:
+      - "8081:80"
+    restart: always
+
+  website2:
+    image: nginx
+    ports:
+      - "8082:80"
+    restart: always
+    networks:
+      chels:
+        ipv4_address: 192.168.92.21
+
+networks:
+  chels:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.92.0/24"
+```
+
 
 Let’s dive into what’s happening in this file —
 
@@ -156,8 +182,9 @@ Specifies the subnet for the chels network, allowing IP addresses from 192.168.9
 So lets save the file and test it out to check if it is working-
 We are going to run - 
 
-~ sudo docker compose up -d again 
-
+```command
+sudo docker compose up -d 
+```
 As you can see from below our new container websit2 was created successfully.
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/0aec240fac18dba82bf0a850903c7c4a5a3e70bb/Images/Screenshot%202024-12-28%20135705.png)
@@ -165,8 +192,10 @@ As you can see from below our new container websit2 was created successfully.
 
 
 Now lets go on to verify our networking by running -
-~sudo docker networking ls 
 
+```command
+sudo docker networking ls 
+```
 As you can see from below we now have two docker composed networks the Default that was created by docker and the other one that we specified.
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/54c78c70f5550d45e0b2952e4191316c4104818b/Images/Screenshot%202024-12-28%20140022.png)
@@ -174,8 +203,9 @@ As you can see from below we now have two docker composed networks the Default t
 
 Now if we run Docker inspect we should be able to see our container with the IP Address we configured ealier.
 
-~ run- sudo docker inspect 
-
+```command
+run- sudo docker inspect 
+```
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/e185f7bea420e34864f0e8b5211f775c24c8cc3e/Images/Screenshot%202024-12-28%20141001.png)
 
@@ -194,6 +224,9 @@ First, you have to create a new directory and create a file as shown below:
 Now that we have successfully created our file.
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/5327c2a9c925e437402bf984fb91c2687ecbbded/Images/Screenshot%202024-12-28%20200329.png)
+
+
+
 
 Let’s dive into what’s happening in this file —
 
