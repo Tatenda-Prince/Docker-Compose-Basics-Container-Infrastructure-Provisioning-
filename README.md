@@ -271,12 +271,11 @@ volumes:
 
 Let’s dive into what’s happening in this file —
 
-## Version: "3"
-  
-## Services
+Version: "3"
 
+Services
 
-1.## WordPress:
+## WordPress:
 
 Image: ~wordpress - This pulls the official WordPress Docker image from Docker Hub.
 
@@ -303,7 +302,7 @@ Networks:
 ~Connects to the chels custom network with a static IP address (10.56.1.21).
 
 
-2.## MySQL:
+## MySQL:
 
 
 Image: mysql:5.7 - Uses MySQL version 5.7.
@@ -333,7 +332,9 @@ Volumes
 mysql_data:
 ~A named volume used to persist MySQL data across container restarts.
 
-## Here is our complete docker-compose.yaml file now let run it by entering these commands -
+## Now that our docker-compose.yaml file is complete let's run the following commands  -
+
+
 
 ```command
 docker compose up -d
