@@ -39,9 +39,12 @@ Basic knowledge and use of an Interactive Development Environment (IDE).
 
 first, head on to open our terminal, Using Ubuntu WSL2 we are going to install Docker and Docker compose, then run the following commands-
 
-~ sudo apt update
-
-~ sudo apt install docker.io docker-compose -y 
+```command
+sudo apt update
+```
+```command
+sudo apt install docker.io docker-compose -y 
+```
 
 # Step 1: Configuring the docker-compose.yml file
 
