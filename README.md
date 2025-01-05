@@ -225,16 +225,58 @@ Now that we have successfully created our file.
 
 ![image alt](https://github.com/Tatenda-Prince/Docker-Compose-Basics-Container-Infrastructure-Provisioning-/blob/5327c2a9c925e437402bf984fb91c2687ecbbded/Images/Screenshot%202024-12-28%20200329.png)
 
+```yaml
+version: '3'
 
+services:
+  wordpress:
+    image: wordpress
+    container_name: wordpress_cfa
+    ports:
+      - "8089:80" # Maps port 8089 on your host to port 80 in the container
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: "Tatenda"
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      chels:
+        ipv4_address: "10.56.1.21"
+
+  mysql:
+    image: mysql:5.7
+    container_name: wordpress_cfc
+    environment:
+      MYSQL_ROOT_PASSWORD: "Tatenda"
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      chels:
+        ipv4_address: "10.56.1.20"
+
+networks:
+  chels:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "10.56.1.0/24"
+
+volumes:
+  mysql_data:
+```
 
 
 Let’s dive into what’s happening in this file —
 
-Version: "3"
+## Version: "3"
   
-Services
+## Services
 
-1.WordPress:
+
+1.## WordPress:
 
 Image: ~wordpress - This pulls the official WordPress Docker image from Docker Hub.
 
@@ -261,7 +303,7 @@ Networks:
 ~Connects to the chels custom network with a static IP address (10.56.1.21).
 
 
-2.MySQL:
+2.## MySQL:
 
 
 Image: mysql:5.7 - Uses MySQL version 5.7.
@@ -291,11 +333,15 @@ Volumes
 mysql_data:
 ~A named volume used to persist MySQL data across container restarts.
 
-Here is our complete docker-compose.yaml file now let run it by entering these commands -
+## Here is our complete docker-compose.yaml file now let run it by entering these commands -
 
-~ docker compose up -d
+```command
+docker compose up -d
+```
 
-~ docker compose ps 
+```command
+docker compose ps 
+```
 
 Below you can see that two containers were successfully created.
 
